@@ -358,6 +358,9 @@ void inform_user_on_inverter() {
   intervalUpdateValues = 800;              // This protocol also requires the values to be updated faster
   Serial.println("SOLAX CAN protocol selected");
 #endif
+#ifdef SOLARK_CAN
+  Serial.println("Sol-Ark CAN protocol selected");
+#endif
 }
 
 void init_battery() {
@@ -408,6 +411,10 @@ void receive_can() {  // This section checks if we have a complete CAN message i
 #ifdef SOLAX_CAN
       receive_can_solax(rx_frame);
 #endif
+//TODO does this belong in extended or standard frame?
+#ifdef SOLARK_CAN
+      receive_can_solark(rx_frame);
+#endif
     }
   }
 }
@@ -426,6 +433,9 @@ void send_can() {
 #endif
 #ifdef SOFAR_CAN
   send_can_sofar();
+#endif
+#ifdef SOLARK_CAN
+  send_can_solark();
 #endif
   // Battery
   send_can_battery();
@@ -650,6 +660,9 @@ void update_values() {
 #endif
 #ifdef SOLAX_CAN
   update_values_can_solax();
+#endif
+#ifdef SOLARK_CAN
+  update_values_can_solark();
 #endif
 }
 
