@@ -429,6 +429,9 @@ String processor(const String& var) {
 #ifdef SOLAX_CAN
     content += "SolaX Triple Power LFP over CAN bus";
 #endif
+#ifdef SOLARK_CAN
+    content += "Sol-Ark Inverter (Extended frame?) over CAN bus";
+#endif
     content += "</h4>";
 
     content += "<h4 style='color: white;'>Battery protocol: ";
