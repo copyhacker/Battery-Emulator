@@ -34,7 +34,7 @@
 
 
 /* Other options */
-//#define DEBUG_VIA_USB  //Enable this line to have the USB port output serial diagnostic data while program runs
+#define DEBUG_VIA_USB  //Enable this line to have the USB port output serial diagnostic data while program runs
 //#define INTERLOCK_REQUIRED  //Nissan LEAF specific setting, if enabled requires both high voltage conenctors to be seated before starting
 //#define CONTACTOR_CONTROL     //Enable this line to have pins 25,32,33 handle automatic precharge/contactor+/contactor- closing sequence
 //#define PWM_CONTACTOR_CONTROL //Enable this line to use PWM logic for contactors, which lower power consumption and heat generation
@@ -42,7 +42,7 @@
 //#define SERIAL_LINK_RECEIVER  //Enable this line to receive battery data over RS485 pins from another Lilygo (This LilyGo interfaces with inverter)
 //#define SERIAL_LINK_TRANSMITTER  //Enable this line to send battery data over RS485 pins to another Lilygo (This LilyGo interfaces with battery)
 #define WEBSERVER  //Enable this line to enable WiFi, and to run the webserver. See USER_SETTINGS.cpp for the Wifi settings.
-//#define LOAD_SAVED_SETTINGS_ON_BOOT  //Enable this line to read settings stored via the webserver on boot (overrides any battery settings set in USER_SETTINGS.cpp)
+#define LOAD_SAVED_SETTINGS_ON_BOOT  //Enable this line to read settings stored via the webserver on boot (overrides any battery settings set in USER_SETTINGS.cpp)
 
 /* MQTT options */
 // #define MQTT  // Enable this line to enable MQTT
