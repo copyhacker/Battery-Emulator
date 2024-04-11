@@ -18,12 +18,12 @@
 //#define RENAULT_KANGOO_BATTERY
 //#define RENAULT_ZOE_BATTERY
 //#define SANTA_FE_PHEV_BATTERY
-#define TESLA_MODEL_3_BATTERY
+//#define TESLA_MODEL_3_BATTERY
 //#define VOLVO_SPA_BATTERY
-// #define TEST_FAKE_BATTERY
+#define TEST_FAKE_BATTERY
 
 /* Select inverter communication protocol. See Wiki for which to use with your inverter: https://github.com/dalathegreat/BYD-Battery-Emulator-For-Gen24/wiki */
-//#define BYD_CAN          //Enable this line to emulate a "BYD Battery-Box Premium HVS" over CAN Bus
+#define BYD_CAN          //Enable this line to emulate a "BYD Battery-Box Premium HVS" over CAN Bus
 //#define BYD_MODBUS  //Enable this line to emulate a "BYD 11kWh HVM battery" over Modbus RTU
 //#define LUNA2000_MODBUS  //Enable this line to emulate a "Luna2000 battery" over Modbus RTU
 //#define PYLON_CAN        //Enable this line to emulate a "Pylontech battery" over CAN bus
@@ -32,7 +32,7 @@
 //#define SOFAR_CAN        //Enable this line to emulate a "Sofar Energy Storage Inverter High Voltage BMS General Protocol (Extended Frame)" over CAN bus
 //#define SOLAX_CAN        //Enable this line to emulate a "SolaX Triple Power LFP" over CAN bus
 
-#define SOLARK_CAN       //Enable this line to emulate a "Sol-Ark Inverter" over CAN bus
+//#define SOLARK_CAN       //Enable this line to emulate a "Sol-Ark Inverter" over CAN bus
 
 
 /* Other options */

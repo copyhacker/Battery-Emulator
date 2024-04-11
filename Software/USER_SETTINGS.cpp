@@ -14,10 +14,10 @@ volatile float CHARGER_END_A = 1.0;       // Current at which charging is consid
 #ifdef WEBSERVER
 volatile uint8_t AccessPointEnabled =
     true;  //Set to either true or false incase you want the board to enable a direct wifi access point
-const char* ssid = "Haven-guest";          // Maximum of 63 characters;
-const char* password = "1029fcloop";  // Minimum of 8 characters;
+const char* ssid = "AAA WI-FI";          // Maximum of 63 characters;
+const char* password = "AAAUtility2018";  // Minimum of 8 characters;
 const char* ssidAP = "Lilygo";              // Maximum of 63 characters;
-const char* passwordAP = "12345678";  // Minimum of 8 characters; set to NULL if you want the access point to be open
+const char* passwordAP = NULL;  // Minimum of 8 characters; set to NULL if you want the access point to be open
 const uint8_t wifi_channel = 0;        // set to 0 for automatic channel selection
 
 // MQTT
