@@ -35,10 +35,6 @@
 #include "SOLAX-CAN.h"
 #endif
 
-#ifdef SOLARK_CAN
-#include "SOLARK-CAN.h"
-#endif
-
 #ifdef SERIAL_LINK_TRANSMITTER
 #include "SERIAL-LINK-TRANSMITTER-INVERTER.h"
 #endif
