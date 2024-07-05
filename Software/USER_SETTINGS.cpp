@@ -13,7 +13,7 @@ volatile float CHARGER_END_A = 1.0;       // Current at which charging is consid
 
 #ifdef WEBSERVER
 volatile uint8_t AccessPointEnabled =
-    true;  //Set to either true or false incase you want the board to enable a direct wifi access point
+    false;  //Set to either true or false incase you want the board to enable a direct wifi access point
 const char* ssid = "Haven-guest";          // Maximum of 63 characters;
 const char* password = "1029fcloop";  // Minimum of 8 characters;
 const char* ssidAP = "Lilygo";              // Maximum of 63 characters;
