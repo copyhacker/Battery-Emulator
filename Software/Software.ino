@@ -479,6 +479,9 @@ void init_inverter() {
   datalayer.system.status.inverter_allows_contactor_closing = false;  // The inverter needs to allow first
   intervalUpdateValues = 800;  // This protocol also requires the values to be updated faster
 #endif
+#ifdef SOLARK_CAN
+  Serial.println("Sol-Ark CAN protocol selected");
+#endif
 }
 
 void init_battery() {
@@ -538,10 +541,50 @@ void receive_can() {  // This section checks if we have a complete CAN message i
 #ifdef CHARGER_SELECTED
     receive_can_charger(rx_frame);
 #endif
+      // Charger
+#ifdef CHEVYVOLT_CHARGER
+      receive_can_chevyvolt_charger(rx_frame);
+#endif
+#ifdef NISSANLEAF_CHARGER
+      receive_can_nissanleaf_charger(rx_frame);
+#endif
+    } else {
+      //printf("New extended frame");
+#ifdef PYLON_CAN
+      receive_can_pylon(rx_frame);
+#endif
+#ifdef SOFAR_CAN
+      receive_can_sofar(rx_frame);
+#endif
+#ifdef SOLAX_CAN
+      receive_can_solax(rx_frame);
+#endif
+//TODO does this belong in extended or standard frame?
+#ifdef SOLARK_CAN
+      receive_can_solark(rx_frame);
+#endif
+    }
   }
 }
 
 void send_can() {
+  // Send CAN messages
+  // Inverter
+#ifdef BYD_CAN
+  send_can_byd();
+#endif
+#ifdef SMA_CAN
+  send_can_sma();
+#endif
+#ifdef SMA_TRIPOWER_CAN
+  send_can_sma_tripower();
+#endif
+#ifdef SOFAR_CAN
+  send_can_sofar();
+#endif
+#ifdef SOLARK_CAN
+  send_can_solark();
+#endif
   // Battery
   send_can_battery();
   // Inverter
@@ -714,6 +757,9 @@ void update_values_inverter() {
 #endif
 #ifdef MODBUS_INVERTER_SELECTED
   update_modbus_registers_inverter();
+#endif
+#ifdef SOLARK_CAN
+  update_values_can_solark();
 #endif
 }
 
