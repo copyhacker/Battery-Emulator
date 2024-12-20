@@ -30,15 +30,14 @@
 //#define RENAULT_ZOE_GEN1_BATTERY
 //#define RENAULT_ZOE_GEN2_BATTERY
 //#define SANTA_FE_PHEV_BATTERY
-//#define TESLA_MODEL_3Y_BATTERY
-//#define TESLA_MODEL_SX_BATTERY
+#define TESLA_MODEL_3Y_BATTERY
 //#define VOLVO_SPA_BATTERY
 //#define TEST_FAKE_BATTERY
 //#define DOUBLE_BATTERY  //Enable this line if you use two identical batteries at the same time (requires CAN_ADDON setup)
 
 /* Select inverter communication protocol. See Wiki for which to use with your inverter: https://github.com/dalathegreat/BYD-Battery-Emulator-For-Gen24/wiki */
 //#define AFORE_CAN        //Enable this line to emulate an "Afore battery" over CAN bus
-//#define BYD_CAN          //Enable this line to emulate a "BYD Battery-Box Premium HVS" over CAN Bus
+#define BYD_CAN          //Enable this line to emulate a "BYD Battery-Box Premium HVS" over CAN Bus
 //#define BYD_KOSTAL_RS485 //Enable this line to emulate a "BYD 11kWh HVM battery" over Kostal RS485
 //#define BYD_MODBUS       //Enable this line to emulate a "BYD 11kWh HVM battery" over Modbus RTU
 //#define BYD_SMA          //Enable this line to emulate a SMA compatible "BYD Battery-Box HVS 10.2KW battery" over CAN bus
@@ -65,8 +64,8 @@
 //#define NC_CONTACTORS         //Enable this line to control normally closed contactors. CONTACTOR_CONTROL must be enabled for this option. Extremely rare setting!
 
 /* Other options */
-//#define DEBUG_VIA_USB          //Enable this line to have the USB port output serial diagnostic data while program runs (WARNING, raises CPU load, do not use for production)
-//#define DEBUG_CAN_DATA         //Enable this line to print incoming/outgoing CAN & CAN-FD messages to USB serial (WARNING, raises CPU load, do not use for production)
+#define DEBUG_VIA_USB          //Enable this line to have the USB port output serial diagnostic data while program runs (WARNING, raises CPU load, do not use for production)
+#define DEBUG_CAN_DATA         //Enable this line to print incoming/outgoing CAN & CAN-FD messages to USB serial (WARNING, raises CPU load, do not use for production)
 //#define INTERLOCK_REQUIRED     //Nissan LEAF specific setting, if enabled requires both high voltage conenctors to be seated before starting
 //#define CAN_ADDON              //Enable this line to activate an isolated secondary CAN Bus using add-on MCP2515 chip (Needed for some inverters / double battery)
 #define CRYSTAL_FREQUENCY_MHZ 8  //CAN_ADDON option, what is your MCP2515 add-on boards crystal frequency?
@@ -114,7 +113,7 @@
 
 /* Battery settings */
 // Predefined total energy capacity of the battery in Watt-hours
-#define BATTERY_WH_MAX 30000
+#define BATTERY_WH_MAX 75000
 // Increases battery life. If true will rescale SOC between the configured min/max-percentage
 #define BATTERY_USE_SCALED_SOC true
 // 8000 = 80.0% , Max percentage the battery will charge to (Inverter gets 100% when reached)
