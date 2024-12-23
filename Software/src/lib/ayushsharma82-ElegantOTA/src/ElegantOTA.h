@@ -64,7 +64,7 @@ _____ _                        _    ___ _____  _
   #include "Update.h"
   #include "StreamString.h"
   #if ELEGANTOTA_USE_ASYNC_WEBSERVER == 1
-    #include "../../me-no-dev-AsyncTCP/src/AsyncTCP.h"
+    #include "../../mathieucarbou-AsyncTCP/src/AsyncTCP.h"
     #include "../../me-no-dev-ESPAsyncWebServer/src/ESPAsyncWebServer.h"
     #define ELEGANTOTA_WEBSERVER AsyncWebServer
   #else
@@ -119,8 +119,8 @@ class ElegantOTAClass{
     ELEGANTOTA_WEBSERVER *_server;
 
     bool _authenticate;
-    char _username[64];
-    char _password[64];
+    String _username;
+    String _password;
 
     bool _auto_reboot = true;
     bool _reboot = false;
